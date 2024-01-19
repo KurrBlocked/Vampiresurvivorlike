@@ -281,7 +281,7 @@ MonoBehaviour:
   - {fileID: 8945078697900102805, guid: d56e22126a9c8c3498bd6730b47ed44f, type: 3}
   - {fileID: 8945078697900102805, guid: 2499dc9b6760f3f488beb83094c4cf27, type: 3}
   player: {fileID: 1936264492}
-  checkerRadius: 0.2
+  checkerRadius: 0.4
   terrainMask:
     serializedVersion: 2
     m_Bits: 64
@@ -405,8 +405,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 395f6b9556f14704790df6035be6ee3a, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -8412501384108537732, guid: 569350ed5eab25147b1cc36544d2027d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -429,8 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0061295f66b008a44a859e8c5a9b81cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 1936264496}
-  playerSpeed: 1
+  playerSpeed: 0.25
 --- !u!4 &1936264495
 Transform:
   m_ObjectHideFlags: 0
@@ -439,8 +438,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936264492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.01, z: 0}
-  m_LocalScale: {x: 1, y: 1.0311, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 519420032}
   m_Father: {fileID: 0}
@@ -480,16 +479,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 1.1, y: 1.1}
   m_EdgeRadius: 0

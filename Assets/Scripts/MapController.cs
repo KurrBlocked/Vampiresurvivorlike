@@ -35,7 +35,7 @@ public class MapController : MonoBehaviour
         {
             return;
         }
-        if (player.GetComponent<Rigidbody2D>().velocity.x > 0)//right
+        if (Input.GetKey(KeyCode.D))//right
         {
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("UpRight").position, checkerRadius, terrainMask))
             {
@@ -54,7 +54,7 @@ public class MapController : MonoBehaviour
             }
 
         }
-        else if (player.GetComponent<Rigidbody2D>().velocity.x < 0)//left
+        else if (Input.GetKey(KeyCode.A))//left
         {
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("UpLeft").position, checkerRadius, terrainMask))
             {
@@ -72,7 +72,7 @@ public class MapController : MonoBehaviour
                 SpawnChunk();
             }
         }
-        if(player.GetComponent<Rigidbody2D>().velocity.y > 0)//up
+        if(Input.GetKey(KeyCode.W))//up
         {
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("UpLeft").position, checkerRadius, terrainMask))
             {
@@ -90,7 +90,7 @@ public class MapController : MonoBehaviour
                 SpawnChunk();
             }
         }
-        else if(player.GetComponent<Rigidbody2D>().velocity.y < 0)//down
+        else if(Input.GetKey(KeyCode.S))//down
         {
             if (!Physics2D.OverlapCircle(currentChunk.transform.Find("DownLeft").position, checkerRadius, terrainMask))
             {
