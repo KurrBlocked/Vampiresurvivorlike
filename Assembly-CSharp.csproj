@@ -59,7 +59,7 @@
     <Compile Include="Assets\Scripts\MapController.cs" />
     <Compile Include="Assets\Scripts\PropRandomizer.cs" />
     <Compile Include="Assets\Scripts\ChunkTrigger.cs" />
-    <Compile Include="Assets\Scripts\TempPlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
