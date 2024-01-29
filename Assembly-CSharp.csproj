@@ -56,10 +56,57 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ExpOrb.cs" />
+    <Compile Include="Assets\Scripts\KunaiStorm.cs" />
+    <Compile Include="Assets\Scripts\Explosion.cs" />
+    <Compile Include="Assets\Scripts\HittableEnemy.cs" />
+    <Compile Include="Assets\Scripts\LevelNumberCreator.cs" />
+    <Compile Include="Assets\Scripts\Number.cs" />
+    <Compile Include="Assets\Scripts\WeaponStat.cs" />
+    <Compile Include="Assets\Scripts\PlayerLevelManager.cs" />
     <Compile Include="Assets\Scripts\MapController.cs" />
+    <Compile Include="Assets\Scripts\Dash.cs" />
+    <Compile Include="Assets\Scripts\UpgradeManager.cs" />
+    <Compile Include="Assets\Scripts\Kunai.cs" />
+    <Compile Include="Assets\CharmBarrage.cs" />
+    <Compile Include="Assets\Scripts\ExplosiveTag.cs" />
+    <Compile Include="Assets\Scripts\LargeShuriken.cs" />
+    <Compile Include="Assets\Scripts\ActiveAbilityInformation.cs" />
+    <Compile Include="Assets\Scripts\LevelTextManager.cs" />
     <Compile Include="Assets\Scripts\PropRandomizer.cs" />
     <Compile Include="Assets\Scripts\ChunkTrigger.cs" />
+    <Compile Include="Assets\Scripts\DamageNumberSpawner.cs" />
+    <Compile Include="Assets\Scripts\CursorController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\ChainSickleCyclone.cs" />
+    <Compile Include="Assets\Scripts\AttackManager.cs" />
+    <Compile Include="Assets\Scripts\ChainSickle.cs" />
+    <Compile Include="Assets\Scripts\WeaponInformation.cs" />
+    <Compile Include="Assets\ActiveSlot.cs" />
+    <Compile Include="Assets\TimerNumberSpawner.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

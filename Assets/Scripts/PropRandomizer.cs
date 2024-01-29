@@ -12,12 +12,6 @@ public class PropRandomizer : MonoBehaviour
     {
         SpawnProps();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void SpawnProps()
     {
         foreach (GameObject sp in propSpawnPoints)
