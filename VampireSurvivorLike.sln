@@ -1,7 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.TestRunner", "UnityEngine.TestRunner.csproj", "{DBD60381-1AA3-BC81-471F-4666E7BFDFE6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Mathematics", "Unity.Mathematics.csproj", "{CB9CA359-861F-6822-317A-C9C377B00EBD}"
@@ -65,9 +64,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.CollabProxy.Editor", "Unity.CollabProxy.Editor.csproj", "{C6F18D29-D425-B1A6-AF38-B65E45210470}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.InternalAPIEditorBridge.001", "Unity.InternalAPIEditorBridge.001.csproj", "{06FBB423-FF7A-7B34-B1F1-1FAFEBD78294}"
-=======
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{53B947F8-4C1D-3AE3-8D6A-3146C5D621F3}"
->>>>>>> 8755c7185f720bf41c2af509d23568a556f919ec
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,7 +71,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-<<<<<<< HEAD
 		{DBD60381-1AA3-BC81-471F-4666E7BFDFE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DBD60381-1AA3-BC81-471F-4666E7BFDFE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBD60381-1AA3-BC81-471F-4666E7BFDFE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -204,12 +199,6 @@ Global
 		{06FBB423-FF7A-7B34-B1F1-1FAFEBD78294}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06FBB423-FF7A-7B34-B1F1-1FAFEBD78294}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06FBB423-FF7A-7B34-B1F1-1FAFEBD78294}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
-		{53B947F8-4C1D-3AE3-8D6A-3146C5D621F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53B947F8-4C1D-3AE3-8D6A-3146C5D621F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53B947F8-4C1D-3AE3-8D6A-3146C5D621F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53B947F8-4C1D-3AE3-8D6A-3146C5D621F3}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> 8755c7185f720bf41c2af509d23568a556f919ec
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

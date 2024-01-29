@@ -298,4 +298,11 @@ MonoBehaviour:
   maxEnemiesReached: 0
   waveInterval: 0
   relativeSpawnPoints:
-  - {fileID: 0}
+  - {fileID: 929003324909457907}
+  - {fileID: 3677284989794643918}
+  - {fileID: 3224413868185359208}
+  - {fileID: 7722565724115479316}
+  - {fileID: 5620861803997582232}
+  - {fileID: 3425124633935159736}
+  - {fileID: 2467135095952617069}
+  - {fileID: 1275456328069289639}
