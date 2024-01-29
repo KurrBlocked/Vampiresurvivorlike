@@ -4,9 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - TestHittable
   - Collectable
   - Attack
+=======
+  - Enemy
+>>>>>>> 8755c7185f720bf41c2af509d23568a556f919ec
   layers:
   - Default
   - TransparentFX
