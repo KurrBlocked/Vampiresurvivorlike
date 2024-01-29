@@ -6,28 +6,23 @@ public class DamageNumberSpawner : MonoBehaviour
 {
     public List<GameObject> numbers;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        numbers = new List<GameObject>();
         for (int i = 0; i < 10; i++)
         {
             numbers.Add(Resources.Load("Numbers_" + i) as GameObject);
         }
 
     }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        
-    }
-
     public void SpawnDamageNumbers(int number, Vector3 position)
     {
         int[] numbersToSpawn = IntToArray(number);
         int index = 0;
+        float rand = Random.Range(-0.5f, 0.5f);
         foreach (int n in numbersToSpawn)
         {
-            Instantiate(numbers[n], position + new Vector3(index * 0.3f,0,0), Quaternion.identity);
+            Instantiate(numbers[n], position + new Vector3(index * 0.3f + rand,0,0), Quaternion.identity);
             index++;
         }
     }

@@ -100,11 +100,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.4
   duration: 4
-  damage: 5
-  isActive: 0
-  cooldownUpgradeLevel: 0
-  damageUpgradeLevel: 0
-  numProjectileUpgradeLevel: 0
 --- !u!114 &3001898922097861167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,9 +112,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7acf1e3fb83534ab34cf3f65c8e495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0.7
-  damage: 2
-  numProjectiles: 1
+  weaponDescription: Throws a Kunai At the Cursor
+  timer:
+    upgradeDescription: Reduces Throwing Cooldown
+    currentTier: 0
+    values:
+    - 0.8
+    - 0.6
+    - 0.4
+    - 0.3
+    - 0.2
+    - 0.1
+    levelRequirement:
+    - 0
+    - 2
+    - 6
+    - 10
+    - 15
+    - 20
+    currentValue: 0.8
+  damage:
+    upgradeDescription: Increases Damage
+    currentTier: 0
+    values:
+    - 20
+    - 25
+    - 30
+    - 35
+    - 40
+    - 45
+    - 50
+    levelRequirement:
+    - 0
+    - 2
+    - 4
+    - 6
+    - 12
+    - 14
+    - 16
+    currentValue: 30
+  numProjectiles:
+    upgradeDescription: Increases Number of Projectiles Thrown
+    currentTier: 0
+    values:
+    - 1
+    - 2
+    - 3
+    levelRequirement:
+    - 0
+    - 3
+    - 8
+    currentValue: 2
+  scale:
+    upgradeDescription: Increases Projectile Size
+    currentTier: 0
+    values:
+    - 1
+    levelRequirement:
+    - 0
+    currentValue: 1
+  levelRequirement: 0
+  icon: {fileID: 21300000, guid: 9c8d663a050a261459065c6e490ff1e1, type: 3}
 --- !u!50 &7990206868082817345
 Rigidbody2D:
   serializedVersion: 4

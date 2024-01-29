@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
-        
     }
 
     // Update is called once per frame

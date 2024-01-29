@@ -17,14 +17,12 @@ public class CursorController : MonoBehaviour
         player = FindAnyObjectByType<PlayerController>();
         pointer.transform.parent = player.gameObject.transform;
         Cursor.visible = false;
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 cursorLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        cursor.transform.position = new Vector3(cursorLocation.x, cursorLocation.y, 0f);
+        
         throwingDirection = player.transform.position - cursor.transform.position;
         float angle = Mathf.Atan2(throwingDirection.y, throwingDirection.x) * Mathf.Rad2Deg;
         angle += 90;
@@ -40,5 +38,10 @@ public class CursorController : MonoBehaviour
             player.GetComponent<SpriteRenderer>().flipX = false;
         }
 
+    }
+    private void FixedUpdate()
+    {
+        Vector3 cursorLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        cursor.transform.position = new Vector3(cursorLocation.x, cursorLocation.y, 0f);
     }
 }

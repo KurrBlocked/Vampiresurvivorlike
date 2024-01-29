@@ -6,10 +6,7 @@ public class LargeShuriken : MonoBehaviour
 {
     public float speed = 10f;
     public float duration = 4f;
-    public float damage = 5f;
-
     private Vector2 targetDirection;
-    public float cooldown = 5f;
 
     private void Start()
     {
@@ -25,5 +22,9 @@ public class LargeShuriken : MonoBehaviour
     public void SetTarget(Vector2 v)
     {
         targetDirection = v;
+    }
+    public void SetScale(float scale)
+    {
+        transform.localScale = new Vector3(scale, scale);
     }
 }

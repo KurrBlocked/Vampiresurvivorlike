@@ -8,21 +8,28 @@ public class PlayerLevelManager : MonoBehaviour
     public int level;
     public int levelUpRequirement = 10;
     public float percentage;
+    public float increaseLevelUpRequirementIncrement = 2.1f;
+    private int previousRequirement;
 
+    public UpgradeManager upgrader;
     // Start is called before the first frame update
     void Start()
     {
         experience = 0;
         level = 1;
+        upgrader = FindAnyObjectByType<UpgradeManager>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (experience / levelUpRequirement == level)
+        if (percentage >= 1f)
         {
             level++;
+            previousRequirement = levelUpRequirement;
+            levelUpRequirement = (int)((float)levelUpRequirement * increaseLevelUpRequirementIncrement);
+            upgrader.OpenUpgradeMenu();
         }
-        percentage = ((float) experience - (levelUpRequirement * (level - 1))) / (levelUpRequirement * level);
+        percentage = (float)(experience - previousRequirement) / levelUpRequirement;
     }
 }

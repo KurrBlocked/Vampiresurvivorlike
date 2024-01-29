@@ -57,20 +57,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ExpOrb.cs" />
+    <Compile Include="Assets\Scripts\KunaiStorm.cs" />
+    <Compile Include="Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\HittableEnemy.cs" />
-    <Compile Include="Assets\Number.cs" />
+    <Compile Include="Assets\Scripts\LevelNumberCreator.cs" />
+    <Compile Include="Assets\Scripts\Number.cs" />
+    <Compile Include="Assets\Scripts\WeaponStat.cs" />
     <Compile Include="Assets\Scripts\PlayerLevelManager.cs" />
     <Compile Include="Assets\Scripts\MapController.cs" />
+    <Compile Include="Assets\Scripts\Dash.cs" />
+    <Compile Include="Assets\Scripts\UpgradeManager.cs" />
     <Compile Include="Assets\Scripts\Kunai.cs" />
+    <Compile Include="Assets\CharmBarrage.cs" />
+    <Compile Include="Assets\Scripts\ExplosiveTag.cs" />
     <Compile Include="Assets\Scripts\LargeShuriken.cs" />
+    <Compile Include="Assets\Scripts\ActiveAbilityInformation.cs" />
     <Compile Include="Assets\Scripts\LevelTextManager.cs" />
     <Compile Include="Assets\Scripts\PropRandomizer.cs" />
     <Compile Include="Assets\Scripts\ChunkTrigger.cs" />
     <Compile Include="Assets\Scripts\DamageNumberSpawner.cs" />
     <Compile Include="Assets\Scripts\CursorController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\ChainSickleCyclone.cs" />
     <Compile Include="Assets\Scripts\AttackManager.cs" />
-    <Compile Include="Assets\Scripts\WeaponStats.cs" />
+    <Compile Include="Assets\Scripts\ChainSickle.cs" />
+    <Compile Include="Assets\Scripts\WeaponInformation.cs" />
+    <Compile Include="Assets\ActiveSlot.cs" />
+    <Compile Include="Assets\TimerNumberSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

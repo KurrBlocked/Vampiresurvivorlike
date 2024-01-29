@@ -8,7 +8,7 @@ public class HittableEnemy : MonoBehaviour
     public float iFrames = 1.0f;
     private float iFrameTimer;
 
-    public int health = 99999;
+    public int health = 999;
 
     private List<GameObject> attacksAlreadyAccountedFor;
     private GameObject expOrb;
@@ -16,9 +16,10 @@ public class HittableEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        damageNumber = FindAnyObjectByType<DamageNumberSpawner>();
+        
         attacksAlreadyAccountedFor = new List<GameObject>();
         expOrb = Resources.Load("ExpOrb") as GameObject;
+        damageNumber = gameObject.AddComponent<DamageNumberSpawner>();
     }
 
     // Update is called once per frame
@@ -45,7 +46,19 @@ public class HittableEnemy : MonoBehaviour
         {
             if (!attacksAlreadyAccountedFor.Contains(collision.gameObject))
             {
-                int damage = collision.gameObject.GetComponent<WeaponStats>().damage;
+                int damage;
+                if (collision.gameObject.name == "ChainAttack")
+                {
+                    damage = (int)collision.gameObject.GetComponentInParent<WeaponInformation>().damage.currentValue;
+                    if (!collision.gameObject.GetComponentInParent<ChainSickle>().isSwingingSickle)
+                    {
+                        damage *= (int) collision.gameObject.GetComponentInParent<ChainSickle>().ballDamageModifier;
+                    }
+                }
+                else
+                {
+                    damage = (int)collision.gameObject.GetComponent<WeaponInformation>().damage.currentValue;
+                }
                 damageNumber.SpawnDamageNumbers(damage, gameObject.transform.position);
                 health -= damage;
                 iFrameTimer = iFrames;

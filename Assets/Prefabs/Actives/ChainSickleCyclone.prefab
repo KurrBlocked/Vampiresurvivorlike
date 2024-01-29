@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6047964878959550658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6047964878959550657}
+  - component: {fileID: 6047964878959550659}
+  - component: {fileID: 6047964878959550656}
+  m_Layer: 0
+  m_Name: ChainSickleCyclone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6047964878959550657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6047964878959550658}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6047964878959550659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6047964878959550658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d94a61313e618438b2490687e30802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Swings Multiple Chains
+  timer: 15
+  damageModifier: 1.5
+  requiredUpgrades: 2
+  icon: {fileID: 21300000, guid: cf9f33c4103416d4e9b10d7c40ac2ed9, type: 3}
+--- !u!114 &6047964878959550656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6047964878959550658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a774be00eb9d7e849aa0943d2a2286f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sicklesToSpawn: 20
+  delaysBetweenSpawn: 0.2
+  chainSickle: {fileID: 5895305778833681761, guid: 84beadddd89572b4e959c9c6851c7e52, type: 3}
