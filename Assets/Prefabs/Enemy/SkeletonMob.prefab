@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 5386537105529669312}
   - component: {fileID: 6340704673747503997}
   - component: {fileID: -1917778052454863291}
-  - component: {fileID: 3177593070167527381}
   - component: {fileID: 913156627735460002}
-  - component: {fileID: 3602468123230351063}
   - component: {fileID: -3313699159001959376}
+  - component: {fileID: 3177593070167527381}
+  - component: {fileID: 3602468123230351063}
   - component: {fileID: -6759054376508930544}
   m_Layer: 0
   m_Name: SkeletonMob
@@ -101,6 +101,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: cea6bd751e3f1334badb0236629c2e78, type: 2}
+  attackCooldown: 5
+  bullet: {fileID: 927548118625652576, guid: e1834b004066b9e42a4940a08832b9f0, type: 3}
+--- !u!114 &913156627735460002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234618017534104792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2186b3569a37ae84cba7788454a1a5f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: cea6bd751e3f1334badb0236629c2e78, type: 2}
+  despawnDistance: 20
+--- !u!114 &-3313699159001959376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234618017534104792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e601f5d3c9cd37a48bba60ac8767f273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iFrames: 0
+  expDropProbability: 0.8
 --- !u!50 &3177593070167527381
 Rigidbody2D:
   serializedVersion: 4
@@ -122,20 +152,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &913156627735460002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 234618017534104792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2186b3569a37ae84cba7788454a1a5f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: cea6bd751e3f1334badb0236629c2e78, type: 2}
-  despawnDistance: 20
 --- !u!61 &3602468123230351063
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162,20 +178,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7494765, y: 1.0766482}
   m_EdgeRadius: 0
---- !u!114 &-3313699159001959376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 234618017534104792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e601f5d3c9cd37a48bba60ac8767f273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iFrames: 0
-  expDropProbability: 0.8
 --- !u!58 &-6759054376508930544
 CircleCollider2D:
   m_ObjectHideFlags: 0

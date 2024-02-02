@@ -9,6 +9,14 @@ public class EnemyMovement : MonoBehaviour
     public EnemyScriptableObject enemyData;
 
     Rigidbody2D rb2d;
+
+    [SerializeField]
+    public float attackCooldown;
+    float cooldownTimer;
+    bool isReady;
+
+    [SerializeField]
+    GameObject bullet;
     //Start is called before the first frame update
     void Start()
     {
@@ -23,15 +31,28 @@ public class EnemyMovement : MonoBehaviour
         //distance to player
         float distToPlayer = Vector2.Distance(transform.position, _player.transform.position);
         
-        if(distToPlayer < enemyData.AttackRange)
+        if (distToPlayer < enemyData.AttackRange)
         {
             //code to attack player
             AttackPlayer();
+            if (enemyData.AttackRange > 1)
+            {
+                ProjectileAttack(bullet);
+            }
         }
         else
         {
             //code to chase player
             ChasePlayer();
+        }
+
+        if (cooldownTimer > 0)
+        {
+            cooldownTimer -= Time.deltaTime;
+        }
+        else if (isReady)
+        {
+            isReady = false;
         }
     }
 
@@ -44,6 +65,7 @@ public class EnemyMovement : MonoBehaviour
     void AttackPlayer()
     {
         FacePlayer();
+
         rb2d.velocity = Vector2.zero;
     }
 
@@ -61,5 +83,16 @@ public class EnemyMovement : MonoBehaviour
             transform.localScale = new Vector2(-1, 1);
         }
 
+    }
+    void ProjectileAttack(GameObject attack)
+    {
+        if (!isReady)
+        {
+            cooldownTimer = attackCooldown;
+            isReady = true;
+            bullet = Instantiate(attack, transform.position, Quaternion.identity);
+        }
+
+        //SetDirectionBasedOnDifferentWeapon(bullet);
     }
 }

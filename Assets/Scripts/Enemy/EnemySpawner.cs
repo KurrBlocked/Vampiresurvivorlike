@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
     public class Wave
     {
         public string waveName;
-        public List<EnemyGroup> enemyGroups;    //A list of gruops of enemies to spawn in this wave
+        public List<EnemyGroup> enemyGroups;    //A list of groups of enemies to spawn in this wave
         public int waveQuota;   //The total number of enemies to spawn in this wave
         public float spawnInterval; //The interval at which to spawn enemies
         public int spawnCount;  //The number of enemies already spawned in this wave
@@ -47,8 +47,9 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {
         //Check if the wave has ended and the next wave should start
-        if (currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0)
+        if (currentWaveCount < waves.Count - 1 && waves[currentWaveCount].spawnCount == 0)
         {
+            StopAllCoroutines();
             StartCoroutine(BeginNextWave());
         }
         spawnTimer += Time.deltaTime;
@@ -115,6 +116,7 @@ public class EnemySpawner : MonoBehaviour
                     enemyGroup.spawnCount++;
                     waves[currentWaveCount].spawnCount++;
                     enemiesAlive++;
+                    print("enemies spawned");
                 }
             }
         }
@@ -129,7 +131,6 @@ public class EnemySpawner : MonoBehaviour
     //Call this function when an enemy is killed
     public void OnEnemyKilled()
     {
-        //Decrement the number of enemies alive
         enemiesAlive--;
     }
 }
