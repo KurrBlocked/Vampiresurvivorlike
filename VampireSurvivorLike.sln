@@ -1,6 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.TestRunner", "UnityEngine.TestRunner.csproj", "{58CC9860-67B1-4858-0ECE-802BD29007B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Mathematics", "Unity.Mathematics.csproj", "{1106AF6C-9300-F6CF-D7BC-9E58D92F8695}"
@@ -64,6 +65,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.CollabProxy.Editor", "Unity.CollabProxy.Editor.csproj", "{052FFE55-38F0-EB2D-2BA3-1D3CFCF7701C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.InternalAPIEditorBridge.001", "Unity.InternalAPIEditorBridge.001.csproj", "{94FD8A02-8CE4-D6DD-670C-39D24EAC6EC0}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{53B947F8-4C1D-3AE3-8D6A-3146C5D621F3}"
+>>>>>>> af3154ea9d91fe0d3536eb65c2d76e62c41c2faf
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +75,7 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
 		{58CC9860-67B1-4858-0ECE-802BD29007B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58CC9860-67B1-4858-0ECE-802BD29007B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58CC9860-67B1-4858-0ECE-802BD29007B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -95,10 +100,13 @@ Global
 		{64EE48BE-9EFD-B9D5-DF4C-7B37C60E5C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64EE48BE-9EFD-B9D5-DF4C-7B37C60E5C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64EE48BE-9EFD-B9D5-DF4C-7B37C60E5C74}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+>>>>>>> af3154ea9d91fe0d3536eb65c2d76e62c41c2faf
 		{53B947F8-4C1D-3AE3-8D6A-3146C5D621F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{53B947F8-4C1D-3AE3-8D6A-3146C5D621F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53B947F8-4C1D-3AE3-8D6A-3146C5D621F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53B947F8-4C1D-3AE3-8D6A-3146C5D621F3}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{3142D04C-1307-375E-777D-ECB5428CAAAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3142D04C-1307-375E-777D-ECB5428CAAAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3142D04C-1307-375E-777D-ECB5428CAAAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -199,6 +207,8 @@ Global
 		{94FD8A02-8CE4-D6DD-670C-39D24EAC6EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94FD8A02-8CE4-D6DD-670C-39D24EAC6EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94FD8A02-8CE4-D6DD-670C-39D24EAC6EC0}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+>>>>>>> af3154ea9d91fe0d3536eb65c2d76e62c41c2faf
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

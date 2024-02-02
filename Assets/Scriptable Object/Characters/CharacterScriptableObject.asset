@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd10f582f8887ae46a4520c34f67b2a3, type: 3}
-  m_Name: Orange Skeleton Enemy
+  m_Script: {fileID: 11500000, guid: 6fbe324d76bfb51498f427fc57d4af6b, type: 3}
+  m_Name: CharacterScriptableObject
   m_EditorClassIdentifier: 
-  moveSpeed: 2.5
-  maxHealth: 50
-  damage: 20
-  attackRange: 1
+  maxHealth: 100
+  recovery: 0
+  moveSpeed: 0.2
+  might: 0
+  projectileSpeed: 0
