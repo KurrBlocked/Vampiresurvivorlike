@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expAmount: 1
+  distanceTillMagnet: 3
+  travelSpeed: 0.125
 --- !u!58 &927548118625652580
 CircleCollider2D:
   m_ObjectHideFlags: 0

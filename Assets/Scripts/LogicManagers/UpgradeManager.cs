@@ -15,9 +15,13 @@ public class UpgradeManager : MonoBehaviour
     private List<GameObject> allPossibleUpgrades;
     private List<GameObject> listedUpgrades;
     public int maxNumberOfUpgradesDisplayed = 4;
+    public bool isUpgrading;
+    // Currently 48 upgrades available
+    public int upgradesObtained;
     // Start is called before the first frame update
     void Start()
     {
+        upgradesObtained = 0;
         upgradeScreen = upgradeWindow.GetComponent<CanvasGroup>();
         upgradeScreen.alpha = 0;
         upgradeScreen.interactable = false;
@@ -31,6 +35,7 @@ public class UpgradeManager : MonoBehaviour
     {
         Time.timeScale = 0;
         Cursor.visible = true;
+        isUpgrading = true;
         upgradeScreen.alpha = 1;
         upgradeScreen.interactable = true;
         upgradeScreen.blocksRaycasts = true;
@@ -41,6 +46,7 @@ public class UpgradeManager : MonoBehaviour
     {
         Time.timeScale = 1;
         Cursor.visible = false;
+        isUpgrading = false;
         upgradeScreen.alpha = 0;
         upgradeScreen.interactable = false;
         upgradeScreen.blocksRaycasts = false;
@@ -122,7 +128,8 @@ public class UpgradeManager : MonoBehaviour
                 upgrade.GetComponentInChildren<Text>().text = tmr.upgradeDescription;
                 upgrade.transform.Find("Icon").GetComponent<Image>().sprite = weaponInfo.icon;
                 upgrade.GetComponent<Button>().onClick.AddListener(() => ResumePlaying());
-                upgrade.GetComponent<Button>().onClick.AddListener(() => weapon.GetComponent<WeaponInformation>().timer.UpgradeTier());       
+                upgrade.GetComponent<Button>().onClick.AddListener(() => weapon.GetComponent<WeaponInformation>().timer.UpgradeTier());
+                upgrade.GetComponent<Button>().onClick.AddListener(() => upgradesObtained++);
                 allPossibleUpgrades.Add(upgrade);
             }
         }
@@ -134,7 +141,8 @@ public class UpgradeManager : MonoBehaviour
                 upgrade.GetComponentInChildren<Text>().text = dmg.upgradeDescription;
                 upgrade.transform.Find("Icon").GetComponent<Image>().sprite = weaponInfo.icon;
                 upgrade.GetComponent<Button>().onClick.AddListener(() => ResumePlaying());
-                upgrade.GetComponent<Button>().onClick.AddListener(() => weapon.GetComponent<WeaponInformation>().damage.UpgradeTier()); 
+                upgrade.GetComponent<Button>().onClick.AddListener(() => weapon.GetComponent<WeaponInformation>().damage.UpgradeTier());
+                upgrade.GetComponent<Button>().onClick.AddListener(() => upgradesObtained++);
                 allPossibleUpgrades.Add(upgrade);
             }
         }
@@ -147,6 +155,7 @@ public class UpgradeManager : MonoBehaviour
                 upgrade.transform.Find("Icon").GetComponent<Image>().sprite = weaponInfo.icon;
                 upgrade.GetComponent<Button>().onClick.AddListener(() => ResumePlaying());
                 upgrade.GetComponent<Button>().onClick.AddListener(() => weapon.GetComponent<WeaponInformation>().numProjectiles.UpgradeTier());
+                upgrade.GetComponent<Button>().onClick.AddListener(() => upgradesObtained++);
                 allPossibleUpgrades.Add(upgrade);
             }
         }
@@ -159,6 +168,7 @@ public class UpgradeManager : MonoBehaviour
                 upgrade.transform.Find("Icon").GetComponent<Image>().sprite = weaponInfo.icon;
                 upgrade.GetComponent<Button>().onClick.AddListener(() => ResumePlaying());
                 upgrade.GetComponent<Button>().onClick.AddListener(() => weapon.GetComponent<WeaponInformation>().scale.UpgradeTier());
+                upgrade.GetComponent<Button>().onClick.AddListener(() => upgradesObtained++);
                 allPossibleUpgrades.Add(upgrade);
             }
         }
@@ -174,6 +184,7 @@ public class UpgradeManager : MonoBehaviour
             upgrade.transform.Find("Icon").GetComponent<Image>().sprite = weaponInfo.icon;
             upgrade.GetComponent<Button>().onClick.AddListener(() => ResumePlaying());
             upgrade.GetComponent<Button>().onClick.AddListener(() => attackManager.AddToInventory(weapon));
+            upgrade.GetComponent<Button>().onClick.AddListener(() => upgradesObtained++);
             allPossibleUpgrades.Add(upgrade);
         }
     }
@@ -207,6 +218,7 @@ public class UpgradeManager : MonoBehaviour
                 upgrade.transform.Find("IconFrame").GetComponent<Image>().color = Color.white;
                 upgrade.GetComponent<Button>().onClick.AddListener(() => ResumePlaying());
                 upgrade.GetComponent<Button>().onClick.AddListener(() => attackManager.AddToActiveAbilities(activeAbility));
+                upgrade.GetComponent<Button>().onClick.AddListener(() => upgradesObtained++);
                 allPossibleUpgrades.Add(upgrade);
             }
         }

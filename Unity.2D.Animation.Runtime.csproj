@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E5B93FC6-135F-80C7-C902-C9010BB19196}</ProjectGuid>
+    <ProjectGuid>{64EE48BE-9EFD-B9D5-DF4C-7B37C60E5C74}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Animation.Runtime</AssemblyName>
@@ -672,24 +672,24 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.48f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{20E5BDF1-C180-37A4-7373-2B4B45DD0DE5}</Project>
+      <Project>{0FC72D04-9E2A-5508-1074-804AFF0DE6F7}</Project>
       <Name>Unity.2D.Common.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{B87C3F97-A590-360D-8169-9195175F1375}</Project>
+      <Project>{E7BA3CF9-2C1E-2E0E-42E7-C7E645C53936}</Project>
       <Name>Unity.InternalAPIEngineBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{CB9CA359-861F-6822-317A-C9C377B00EBD}</Project>
+      <Project>{1106AF6C-9300-F6CF-D7BC-9E58D92F8695}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
   </ItemGroup>

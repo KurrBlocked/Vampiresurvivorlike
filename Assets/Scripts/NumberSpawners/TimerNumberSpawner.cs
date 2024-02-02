@@ -7,6 +7,7 @@ public class TimerNumberSpawner : MonoBehaviour
     private LevelNumberCreator numberSpawner;
     public float timer;
 
+    public int minutes;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class TimerNumberSpawner : MonoBehaviour
         timer += Time.deltaTime;
 
         int seconds = (int)timer % 60;
-        int minutes = (int)timer / 60;
+        minutes = (int)timer / 60;
         numberSpawner.ClearNumbers();
         if (seconds < 10)
         {
