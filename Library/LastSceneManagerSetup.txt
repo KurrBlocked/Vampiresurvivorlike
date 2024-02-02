@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/AttackTest.unity
+- path: Assets/Scenes/BossMonster.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -16,7 +16,6 @@ public class HittableEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         attacksAlreadyAccountedFor = new List<GameObject>();
         expOrb = Resources.Load("ExpOrb") as GameObject;
         damageNumber = gameObject.AddComponent<DamageNumberSpawner>();
