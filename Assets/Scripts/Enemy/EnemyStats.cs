@@ -27,7 +27,7 @@ public class EnemyStats : MonoBehaviour
 
     void Start()
     {
-        player = FindObjectOfType<PlayerController>().transform;
+        player = FindObjectOfType<PlayerStats>().transform;
         enemyBody = GetComponent<HittableEnemy>();
     }
 
@@ -56,12 +56,13 @@ public class EnemyStats : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnCollisionStay2D(Collision2D col)
+    private void OnTriggerStay2D(Collider2D col)
     {
+        //Reference the script from the collided collider and deal damage using TakeDamage()
         if (col.gameObject.CompareTag("Player"))
         {
-            PlayerController player = col.gameObject.GetComponent<PlayerController>();
-            //player.TakeDamage(currentDamage);
+            PlayerStats player = col.gameObject.GetComponent<PlayerStats>();
+            player.TakeDamage(currentDamage);   //Make sure to use currentDamage instead of weaponData.damage in case any damage multipliers in the future
         }
     }
 
