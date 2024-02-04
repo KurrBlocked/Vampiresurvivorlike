@@ -720,18 +720,18 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    WASD  --------------------  Movement
+    WASD  ------------------------------------------  Movement
 
 
-    Spacebar -----------------
-    Jump/Forward Dialogue
+    Spacebar
+    + WASD --------------------------- Dash
 
 
-    1/2/3 ----------------------- Activate Ability
+    1/2/3 ---------------------------------------------
+    Activate Ability
 
 
-    Esc
-    ------------------------- Pause/Unpause'
+    Esc ----------------------------------------------- Pause/Unpause'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -794,7 +794,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -481.91718, y: 0, z: 0, w: -187.52426}
+  m_margin: {x: -481.91718, y: 0, z: -195.26636, w: -187.52426}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

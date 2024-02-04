@@ -10,6 +10,7 @@ public class SkeletonProjectile : MonoBehaviour
     public float sizeIncreaseRate = 0.1f;
     public Vector2[] pts;
     private Animator animator;
+    public float damage = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,5 +34,13 @@ public class SkeletonProjectile : MonoBehaviour
             polygonCollider.SetPath(0, pts);
         }
         
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerStats player = collision.gameObject.GetComponent<PlayerStats>();
+            player.TakeDamage(damage);   //Make sure to use currentDamage instead of weaponData.damage in case any damage multipliers in the future
+        }
     }
 }

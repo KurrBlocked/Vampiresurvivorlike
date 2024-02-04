@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd10f582f8887ae46a4520c34f67b2a3, type: 3}
   m_Name: Orange Skeleton Enemy
   m_EditorClassIdentifier: 
-  moveSpeed: 2.5
+  moveSpeed: 2
   maxHealth: 50
-  damage: 20
-  attackRange: 1
+  damage: 4
+  attackRange: 0

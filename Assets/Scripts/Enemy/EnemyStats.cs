@@ -53,10 +53,11 @@ public class EnemyStats : MonoBehaviour
     public void Kill()
     {
         enemyBody.DropEXP();
+        GameStateManager.killCount++;
         Destroy(gameObject);
     }
 
-    private void OnTriggerStay2D(Collider2D col)
+    private void OnCollisionStay2D(Collision2D col)
     {
         //Reference the script from the collided collider and deal damage using TakeDamage()
         if (col.gameObject.CompareTag("Player"))
@@ -68,8 +69,12 @@ public class EnemyStats : MonoBehaviour
 
     private void OnDestroy()
     {
+
         EnemySpawner es = FindObjectOfType<EnemySpawner>();
-        es.OnEnemyKilled();
+        if (es != null)
+        {
+            es.OnEnemyKilled();
+        }
     }
     void ReturnEnemy()
     {

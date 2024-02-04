@@ -147,11 +147,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: d97b54625d8d38544b0f0610b84f1ba9, type: 2}
-  followDistance: 20
+  followDistance: 18
   baseSpeed: 0.0625
-  catchupSpeed: 0.125
-  catchUpMinimumDistance: 25
-  switchRandomLocationTime: 1
+  catchupSpeed: 0.5
+  catchUpMinimumDistance: 20
+  switchRandomLocationTime: 0.5
   projectileReference: {fileID: 274736718336934843, guid: dc9b4bc0818856b468a52d9dba20d3a6, type: 3}
   maxProjectiles: 2
   timeBetweenFiring: 20
@@ -169,7 +169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iFrames: 0
-  expDropProbability: 0.8
+  expDropProbability: 1
+  expAmount: 10000
 --- !u!114 &267885264015292852
 MonoBehaviour:
   m_ObjectHideFlags: 0

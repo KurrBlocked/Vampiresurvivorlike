@@ -101,7 +101,7 @@ MonoBehaviour:
   tier: 0
   boxCollider: {fileID: 4224142684851485426}
   explosionSize: 0
-  duration: 0.5
+  duration: 0.7
 --- !u!61 &4224142684851485426
 BoxCollider2D:
   m_ObjectHideFlags: 0

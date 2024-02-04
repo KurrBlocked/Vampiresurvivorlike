@@ -48,7 +48,7 @@ MonoBehaviour:
   sickle: {fileID: 8818553884287113703, guid: 7ad4bd9df88125b4fa396a3b67dc855d, type: 3}
   ball: {fileID: -4524037305048616665, guid: 7ad4bd9df88125b4fa396a3b67dc855d, type: 3}
   isSwingingSickle: 0
-  ballDamageModifier: 10
+  ballDamageModifier: 4
   rotationSpeed: 8
   rotationTime: 0.9
   sickleCollider: {fileID: 8826190746776703486}
@@ -68,20 +68,25 @@ MonoBehaviour:
   weaponDescription: Swings a Chain Sickle and Ball
   timer:
     upgradeDescription: Reduces Cooldown
-    currentTier: 1
+    currentTier: 0
     values:
+    - 6
+    - 5
     - 4
+    - 3.5
     - 3
-    - 2
     levelRequirement:
     - 0
+    - 7
+    - 11
     - 15
-    - 25
-    currentValue: 3
+    - 20
+    currentValue: 6
   damage:
     upgradeDescription: Increases Damage
-    currentTier: 1
+    currentTier: 0
     values:
+    - 20
     - 30
     - 40
     - 50
@@ -91,7 +96,8 @@ MonoBehaviour:
     - 5
     - 11
     - 15
-    currentValue: 40
+    - 19
+    currentValue: 20
   numProjectiles:
     upgradeDescription: Null
     currentTier: 0
@@ -108,7 +114,7 @@ MonoBehaviour:
     levelRequirement:
     - 0
     currentValue: 1
-  levelRequirement: 7
+  levelRequirement: 5
   icon: {fileID: 21300000, guid: 181bdbd59194ba742b2bb11c66d2fc9b, type: 3}
 --- !u!1 &5895305780433949875
 GameObject:

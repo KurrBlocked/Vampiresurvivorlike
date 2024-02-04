@@ -6,7 +6,7 @@ public class ExpOrb : MonoBehaviour
 {
     private PlayerLevelManager levelManager;
     private PlayerController player;
-    public int expAmount = 10;
+    public int expAmount = 1;
     public float distanceTillMagnet = 5f;
     public float travelSpeed = 2f;
     private void Start()
@@ -28,5 +28,9 @@ public class ExpOrb : MonoBehaviour
             levelManager.experience += expAmount;
             Destroy(gameObject);
         }
+    }
+    public void SetExp(int value)
+    {
+        expAmount = value;
     }
 }

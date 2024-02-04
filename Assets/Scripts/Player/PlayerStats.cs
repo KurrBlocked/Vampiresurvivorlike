@@ -7,7 +7,7 @@ public class PlayerStats : MonoBehaviour
 {
     public CharacterScriptableObject characterData;
     public Image healthBar;
-
+    public bool isDead;
     //Current stats
     float currentHealth;
     float currentRecovery;
@@ -20,6 +20,7 @@ public class PlayerStats : MonoBehaviour
     public float invincibilityDuration;
     float invincibilityTimer;
     bool isInvincible;
+    private Dash dash;
 
     private void Awake()
     {
@@ -29,6 +30,8 @@ public class PlayerStats : MonoBehaviour
         currentMoveSpeed = characterData.MoveSpeed;
         currentMight = characterData.Might;
         currentProjectileSpeed = characterData.ProjectileSpeed;
+        isDead = false;
+        dash = FindAnyObjectByType<Dash>();
     }
 
     void Update()
@@ -41,13 +44,16 @@ public class PlayerStats : MonoBehaviour
         {
             isInvincible = false;
         }
+        if (dash.dashWasPressed)
+        {
+            isInvincible = true;
+        }
     }
 
     public void TakeDamage(float dmg)
     {
         if (!isInvincible)
         {
-
             currentHealth -= dmg;
             healthBar.fillAmount = currentHealth / characterData.MaxHealth; 
 
@@ -56,13 +62,8 @@ public class PlayerStats : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-                Kill();
+                isDead = true;
             }
         }
-    }
-    
-    public void Kill()
-    {
-        Debug.Log("PLAYER IS DEAD");
     }
 }

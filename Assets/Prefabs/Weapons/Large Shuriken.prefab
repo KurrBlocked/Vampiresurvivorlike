@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -3911067791324072773, guid: 569350ed5eab25147b1cc36544d2027d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -117,10 +117,11 @@ MonoBehaviour:
     upgradeDescription: Reduces Throwing Cooldown
     currentTier: 0
     values:
+    - 3.5
+    - 3
+    - 2.5
     - 2
-    - 1.7
     - 1.5
-    - 1.2
     - 1
     levelRequirement:
     - 0
@@ -128,23 +129,24 @@ MonoBehaviour:
     - 9
     - 13
     - 16
-    currentValue: 0
+    - 20
+    currentValue: 3.5
   damage:
     upgradeDescription: Increases Damage
     currentTier: 0
     values:
-    - 100
-    - 130
-    - 160
-    - 190
-    - 210
+    - 60
+    - 90
+    - 120
+    - 150
+    - 180
     levelRequirement:
     - 0
     - 3
     - 6
     - 9
     - 11
-    currentValue: 0
+    currentValue: 60
   numProjectiles:
     upgradeDescription: Increases Number of Projectiles Thrown
     currentTier: 0
@@ -152,22 +154,22 @@ MonoBehaviour:
     - 1
     levelRequirement:
     - 0
-    currentValue: 0
+    currentValue: 1
   scale:
     upgradeDescription: Increases Projectile Size
     currentTier: 0
     values:
     - 1
-    - 1.25
     - 1.5
-    - 1.75
+    - 2
+    - 2.5
     levelRequirement:
     - 0
     - 10
     - 15
     - 20
-    currentValue: 0
-  levelRequirement: 4
+    currentValue: 1
+  levelRequirement: 3
   icon: {fileID: 4473602209687629512, guid: 8dd48cf950c3a844fbe3deaaf86bdf0e, type: 3}
 --- !u!61 &1949688796525422075
 BoxCollider2D:

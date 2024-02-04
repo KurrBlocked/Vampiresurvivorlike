@@ -19,7 +19,7 @@ public class EndScreenStats : MonoBehaviour
         levelText.text = "Player Level: " + GameStateManager.playerLevel;
         TimeText.text = "Minutes Survived: " + GameStateManager.minutesLasted;
         expText.text = "Exp Obtained: " + GameStateManager.expGained;
-        upgradesText.text = "Upgrades Obtained: " + GameStateManager.upgradesObtained;
+        upgradesText.text = "Upgrades Obtained: " + GameStateManager.upgradesObtained + " / 50";
         killCountText.text = "Kill Count: " + GameStateManager.killCount;
     }
 }

@@ -11,6 +11,7 @@ public class HittableEnemy : MonoBehaviour
     private List<GameObject> attacksAlreadyAccountedFor;
     private GameObject expOrb;
     public float expDropProbability = 0.8f;
+    public int expAmount = 1;
 
     private EnemyStats enemyStats;
     // Start is called before the first frame update
@@ -70,7 +71,8 @@ public class HittableEnemy : MonoBehaviour
         float rand = Random.Range(0.0f, 1.0f);
         if (rand <= expDropProbability)
         {
-            Instantiate(expOrb, gameObject.transform.position, Quaternion.identity);
+            GameObject exp = Instantiate(expOrb, gameObject.transform.position, Quaternion.identity);
+            exp.GetComponent<ExpOrb>().SetExp(expAmount);
         }
     }
 }

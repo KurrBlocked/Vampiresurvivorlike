@@ -84,7 +84,6 @@ public class EnemySpawner : MonoBehaviour
         }
 
         waves[currentWaveCount].waveQuota = currentWaveQuota;
-        Debug.LogWarning(currentWaveQuota);
     }
 
     //This method will stop spawning enemies if the amount of enemies on the map is maximum
@@ -108,7 +107,7 @@ public class EnemySpawner : MonoBehaviour
                     }
 
                     //Spawn the enmy at a random position outside of player view
-                    Instantiate(enemyGroup.enemyPrefab, player.position + relativeSpawnPoints[Random.Range(0, relativeSpawnPoints.Count)].position, Quaternion.identity);
+                    Instantiate(enemyGroup.enemyPrefab, player.position + relativeSpawnPoints[Random.Range(0, relativeSpawnPoints.Count)].position + new Vector3 (Random.Range(-2,2), Random.Range(-2, 2)), Quaternion.identity);
 
                     //Vector2 spawnPosition = new Vector2(player.transform.position.x + Random.Range(-5f, 5f), player.transform.position.y + Random.Range(-5f, 5f));
                     //Instantiate(enemyGroup.enemyPrefab, spawnPosition, Quaternion.identity);
@@ -116,7 +115,6 @@ public class EnemySpawner : MonoBehaviour
                     enemyGroup.spawnCount++;
                     waves[currentWaveCount].spawnCount++;
                     enemiesAlive++;
-                    print("enemies spawned");
                 }
             }
         }

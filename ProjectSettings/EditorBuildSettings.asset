@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/AttackTest.unity
     guid: d8c0059adaf01714fa2ccd4ea36fcb37
   - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: baa7bb53a33d01d4d8dc8d25942749fc
+  - enabled: 1
     path: Assets/Scenes/BossMonster.unity
     guid: 446f44631afffe847be9332c807e563f
   - enabled: 1
@@ -17,7 +20,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Instruction.unity
     guid: 23f89eab7a9439b4ebb1707234757878
-  - enabled: 1
-    path: Assets/Scenes/StartMenu.unity
-    guid: baa7bb53a33d01d4d8dc8d25942749fc
   m_configObjects: {}

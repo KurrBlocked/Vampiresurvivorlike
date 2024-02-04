@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Swings Multiple Chains
   timer: 15
-  damageModifier: 1.5
+  damageModifier: 1
   requiredUpgrades: 2
   icon: {fileID: 21300000, guid: cf9f33c4103416d4e9b10d7c40ac2ed9, type: 3}
 --- !u!114 &6047964878959550656
@@ -61,6 +61,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a774be00eb9d7e849aa0943d2a2286f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sicklesToSpawn: 20
-  delaysBetweenSpawn: 0.2
+  sicklesToSpawn: 7
+  delaysBetweenSpawn: 0.3
   chainSickle: {fileID: 5895305778833681761, guid: 84beadddd89572b4e959c9c6851c7e52, type: 3}

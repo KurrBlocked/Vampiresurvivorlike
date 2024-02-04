@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fbe324d76bfb51498f427fc57d4af6b, type: 3}
   m_Name: CharacterScriptableObject
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 120
   recovery: 0
-  moveSpeed: 0.2
+  moveSpeed: 0.046875
   might: 0
   projectileSpeed: 0

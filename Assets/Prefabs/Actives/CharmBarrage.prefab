@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: Releases A large amount of Explosive Tags
-  timer: 15
-  damageModifier: 2
-  requiredUpgrades: 4
+  timer: 25
+  damageModifier: 1
+  requiredUpgrades: 5
   icon: {fileID: 21300000, guid: e157b6c3e41d7f049ace95544380cbca, type: 3}
 --- !u!114 &-2272476489685429463
 MonoBehaviour:
@@ -62,5 +62,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxWaves: 5
-  delaysBetweenWaves: 5
   charm: {fileID: 5956930548460885546, guid: 945143f00573097488d46c83f967c3ff, type: 3}

@@ -90,7 +90,7 @@ public class SkeletonBossBehavior : MonoBehaviour
         if (randomLocationTimer <= 0)
         {
             randomLocationTimer = switchRandomLocationTime;
-            randomLocation = new Vector3(Random.Range(player.transform.position.x - 10f, player.transform.position.x + 10f), Random.Range(player.transform.position.y - 10f, player.transform.position.y + 10f));
+            randomLocation = new Vector3(Random.Range(player.transform.position.x - 14f, player.transform.position.x + 14f), Random.Range(player.transform.position.y - 9f, player.transform.position.y + 9f));
         }
     }
 

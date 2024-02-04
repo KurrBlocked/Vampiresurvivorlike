@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SkeleBoss
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  maxHealth: 9000
-  damage: 3
+  maxHealth: 30000
+  damage: 10
   attackRange: 0

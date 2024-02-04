@@ -16,7 +16,7 @@ public class UpgradeManager : MonoBehaviour
     private List<GameObject> listedUpgrades;
     public int maxNumberOfUpgradesDisplayed = 4;
     public bool isUpgrading;
-    // Currently 48 upgrades available
+    // Currently 50 upgrades available
     public int upgradesObtained;
     // Start is called before the first frame update
     void Start()
@@ -39,6 +39,7 @@ public class UpgradeManager : MonoBehaviour
         upgradeScreen.alpha = 1;
         upgradeScreen.interactable = true;
         upgradeScreen.blocksRaycasts = true;
+        ClearTables();
         CreateUpgradeTable();
         RandomizeAndDisplayUpgrades();
     }
@@ -50,17 +51,7 @@ public class UpgradeManager : MonoBehaviour
         upgradeScreen.alpha = 0;
         upgradeScreen.interactable = false;
         upgradeScreen.blocksRaycasts = false;
-
-        foreach (GameObject upgrade in listedUpgrades)
-        {
-            Destroy(upgrade);
-        }
-        foreach (GameObject upgrade in allPossibleUpgrades)
-        {
-            Destroy(upgrade);
-        }
-        allPossibleUpgrades.Clear();
-        listedUpgrades.Clear();
+        ClearTables();
     }
     private void RandomizeAndDisplayUpgrades()
     {
@@ -210,7 +201,7 @@ public class UpgradeManager : MonoBehaviour
         }
         if (index != -1)
         {
-            if (abilityInfo.requiredUpgrades < items[index].GetComponent<WeaponInformation>().CalculateTotalUpgradeScore())
+            if (abilityInfo.requiredUpgrades <= items[index].GetComponent<WeaponInformation>().CalculateTotalUpgradeScore())
             {
                 GameObject upgrade = Instantiate(upgradeSlot, new Vector3(3000, 3000, 0), Quaternion.identity, upgradeWindow.transform);
                 upgrade.GetComponentInChildren<Text>().text = abilityInfo.description;
@@ -235,5 +226,18 @@ public class UpgradeManager : MonoBehaviour
             }
         }
         return index;
+    }
+    void ClearTables()
+    {
+        foreach (GameObject upgrade in listedUpgrades)
+        {
+            Destroy(upgrade);
+        }
+        foreach (GameObject upgrade in allPossibleUpgrades)
+        {
+            Destroy(upgrade);
+        }
+        allPossibleUpgrades.Clear();
+        listedUpgrades.Clear();
     }
 }

@@ -294,7 +294,7 @@ MonoBehaviour:
   waves: []
   currentWaveCount: 0
   enemiesAlive: 0
-  maxEnemiesAllowed: 0
+  maxEnemiesAllowed: 300
   maxEnemiesReached: 0
   waveInterval: 0
   relativeSpawnPoints:

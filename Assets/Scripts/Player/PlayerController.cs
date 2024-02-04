@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     private SpriteRenderer sprite;
 
+    public float timeModifier = 1f;
+
     public CharacterScriptableObject characterData;
     void Start()
     {

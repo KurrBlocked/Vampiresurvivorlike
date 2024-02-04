@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -2297273979745643385, guid: 569350ed5eab25147b1cc36544d2027d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e3de6175c19b55d42a7f6fcaf262be4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -153,7 +153,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -2297273979745643385, guid: 569350ed5eab25147b1cc36544d2027d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e3de6175c19b55d42a7f6fcaf262be4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -217,5 +217,5 @@ MonoBehaviour:
   delayBeforeFiring: 0.4
   rotationTime: 1
   fireDuration: 0.4
-  fireTime: 0.27
+  fireTime: 0.23
   projectileReference: {fileID: 3400608305889825817, guid: c01b7a0ded99a5549ab3058057c76064, type: 3}

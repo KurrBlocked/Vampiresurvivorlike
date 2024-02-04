@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameStateManager : MonoBehaviour
 {
-    private PlayerController player;
     private bool isPaused;
     public GameObject pauseMenu;
     private CanvasGroup pauseScreen;
@@ -21,20 +20,22 @@ public class GameStateManager : MonoBehaviour
     private UpgradeManager upgrade;
     private TimerNumberSpawner timer;
 
-    public bool isDead = false;
-
+    private PlayerStats player;
 
     void Start()
     {
-        isDead = false;
         isPaused = false;
-        player = FindAnyObjectByType<PlayerController>();
+        player = FindAnyObjectByType<PlayerStats>();
         if (isPlayable)
         {
             pauseScreen = pauseMenu.GetComponent<CanvasGroup>();
             level = FindAnyObjectByType<PlayerLevelManager>();
             upgrade = FindAnyObjectByType<UpgradeManager>();
             timer = FindAnyObjectByType<TimerNumberSpawner>();
+        }
+        else
+        {
+            Cursor.visible = true;
         }
         upgradeManager = FindAnyObjectByType<UpgradeManager>();
         Time.timeScale = 1;
@@ -72,8 +73,7 @@ public class GameStateManager : MonoBehaviour
         }
         if (isPlayable)
         {
-            //PlayerDeath
-            if (isDead)//Add condition here
+            if (player.isDead)
             {
                 playerLevel = level.level;
                 expGained = level.experience;

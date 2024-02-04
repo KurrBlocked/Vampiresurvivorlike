@@ -16,7 +16,9 @@ public class EnemyMovement : MonoBehaviour
     bool isReady;
 
     [SerializeField]
-    GameObject bullet;
+    GameObject attackReference;
+
+    GameObject projectile;
     //Start is called before the first frame update
     void Start()
     {
@@ -30,21 +32,29 @@ public class EnemyMovement : MonoBehaviour
     {
         //distance to player
         float distToPlayer = Vector2.Distance(transform.position, _player.transform.position);
-        
-        if (distToPlayer < enemyData.AttackRange)
+
+        if (projectile == null)
         {
-            //code to attack player
-            AttackPlayer();
-            if (enemyData.AttackRange > 1)
+            if (distToPlayer < enemyData.AttackRange)
             {
-                ProjectileAttack(bullet);
+                //code to attack player
+                AttackPlayer();
+                if (enemyData.AttackRange > 1 && attackReference != null)
+                {
+                    ProjectileAttack(attackReference);
+                }
+            }
+            else
+            {
+                //code to chase player
+                ChasePlayer();
             }
         }
         else
         {
-            //code to chase player
-            ChasePlayer();
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         }
+        
 
         if (cooldownTimer > 0)
         {
@@ -90,9 +100,14 @@ public class EnemyMovement : MonoBehaviour
         {
             cooldownTimer = attackCooldown;
             isReady = true;
-            bullet = Instantiate(attack, transform.position, Quaternion.identity);
+            projectile = Instantiate(attack, transform.position + Vector3.down *0.5f, Quaternion.identity);
         }
-
-        //SetDirectionBasedOnDifferentWeapon(bullet);
+    }
+    private void OnDestroy()
+    {
+        if (projectile != null)
+        {
+            Destroy(projectile);
+        }
     }
 }

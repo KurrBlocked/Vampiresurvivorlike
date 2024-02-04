@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuseTime: 5
   explosion: {fileID: 7833729394551294583, guid: de64fd5b20a29e94bb6964c260334e42, type: 3}
-  explosionSize: 0
+  explosionSize: 2
   isTriggerable: 1
 --- !u!114 &6887805633154992275
 MonoBehaviour:
@@ -119,40 +119,38 @@ MonoBehaviour:
     upgradeDescription: Reduce Cooldown
     currentTier: 0
     values:
-    - 4
-    - 3.5
-    - 3
     - 2.5
     - 2
     - 1.5
+    - 1
+    - 0.5
     levelRequirement:
     - 0
-    - 7
-    - 14
-    - 20
-    - 25
-    - 30
-    currentValue: 4
+    - 4
+    - 8
+    - 11
+    - 15
+    currentValue: 2.5
   damage:
     upgradeDescription: Increase Damage
     currentTier: 0
     values:
-    - 100
-    - 150
+    - 80
+    - 120
+    - 160
     - 200
-    - 250
-    - 300
-    - 350
-    - 400
+    - 240
+    - 280
+    - 320
     levelRequirement:
     - 0
-    - 5
+    - 4
+    - 7
     - 10
-    - 15
-    - 20
-    - 23
-    - 25
-    currentValue: 100
+    - 13
+    - 16
+    - 19
+    currentValue: 80
   numProjectiles:
     upgradeDescription: Null
     currentTier: 0
@@ -165,15 +163,13 @@ MonoBehaviour:
     upgradeDescription: Increases Explosion Size
     currentTier: 0
     values:
-    - 0
     - 1
     - 2
     levelRequirement:
     - 0
-    - 6
-    - 12
-    currentValue: 0
-  levelRequirement: 6
+    - 10
+    currentValue: 1
+  levelRequirement: 3
   icon: {fileID: 4519102783227728988, guid: 8dd48cf950c3a844fbe3deaaf86bdf0e, type: 3}
 --- !u!61 &7838994448082795317
 BoxCollider2D:
@@ -188,7 +184,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0036445558, y: -0.069247186}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -199,7 +195,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 0.7346366, y: 1.1136737}
   m_EdgeRadius: 0
 --- !u!50 &8872856013848620341
 Rigidbody2D:

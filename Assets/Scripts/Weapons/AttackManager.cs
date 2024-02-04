@@ -42,7 +42,7 @@ public class AttackManager : MonoBehaviour
         }
         if (numOfActives != obtainedActives.Count)
         {
-            activeTimers.Add(obtainedActives[numOfActives].GetComponent<ActiveAbilityInformation>().timer);
+            activeTimers.Add(0);
             activeSlots[numOfActives].GetComponent<ActiveSlot>().icon.sprite = obtainedActives[numOfActives].GetComponent<ActiveAbilityInformation>().icon;
             activeSlots[numOfActives].GetComponent<ActiveSlot>().totalCooldown = obtainedActives[numOfActives].GetComponent<ActiveAbilityInformation>().timer;
             activeSlots[numOfActives].GetComponent<ActiveSlot>().isSet = true;
@@ -167,6 +167,7 @@ public class AttackManager : MonoBehaviour
                             }
                             break;
                         default:
+                            
                             Debug.Log("Error: " + i);
                             break;
                     }

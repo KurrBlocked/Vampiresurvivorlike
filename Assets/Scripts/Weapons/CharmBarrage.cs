@@ -6,8 +6,6 @@ public class CharmBarrage : MonoBehaviour
 {
     public int maxWaves = 3;
     private int waveCount;
-    public float delaysBetweenWaves = 1f;
-    private float delayTimer;
     public GameObject charm;
     private PlayerController player;
     private ActiveAbilityInformation abilityInformation;
@@ -15,11 +13,11 @@ public class CharmBarrage : MonoBehaviour
 
     void Start()
     {
-        delayTimer = 0;
         waveCount = 0;
         player = FindAnyObjectByType<PlayerController>();
         abilityInformation = GetComponent<ActiveAbilityInformation>();
         GameObject tag = Instantiate(charm, player.transform.position, Quaternion.identity);
+        modifiedDamage = charm.GetComponent<WeaponInformation>().damage.currentValue * abilityInformation.damageModifier;
         tag.GetComponent<WeaponInformation>().damage.currentValue = modifiedDamage;
         tag.GetComponent<ExplosiveTag>().isTriggerable = false;
         tag.GetComponent<ExplosiveTag>().fuseTime = 1;
@@ -33,11 +31,6 @@ public class CharmBarrage : MonoBehaviour
             modifiedDamage = charm.GetComponent<WeaponInformation>().damage.currentValue * abilityInformation.damageModifier;
             waveCount++;
             FireWave();
-            delayTimer = delaysBetweenWaves;
-        }
-        if (delayTimer > 0)
-        {
-            delayTimer -= 0.01f;
         }
         if (waveCount >= maxWaves)
         {
@@ -62,6 +55,22 @@ public class CharmBarrage : MonoBehaviour
         tag4.GetComponent<WeaponInformation>().damage.currentValue = modifiedDamage;
         tag4.GetComponent<ExplosiveTag>().isTriggerable = false;
         tag4.GetComponent<ExplosiveTag>().fuseTime = 1 + waveCount/10f;
+        GameObject tag5 = Instantiate(charm, player.transform.position + (Vector3.right + Vector3.up)  * waveCount * 2, Quaternion.identity);
+        tag5.GetComponent<WeaponInformation>().damage.currentValue = modifiedDamage;
+        tag5.GetComponent<ExplosiveTag>().isTriggerable = false;
+        tag5.GetComponent<ExplosiveTag>().fuseTime = 1 + waveCount / 10f;
+        GameObject tag6 = Instantiate(charm, player.transform.position + (Vector3.left + Vector3.down) * waveCount * 2, Quaternion.identity);
+        tag6.GetComponent<WeaponInformation>().damage.currentValue = modifiedDamage;
+        tag6.GetComponent<ExplosiveTag>().isTriggerable = false;
+        tag6.GetComponent<ExplosiveTag>().fuseTime = 1 + waveCount / 10f;
+        GameObject tag7 = Instantiate(charm, player.transform.position + (Vector3.up + Vector3.left) * waveCount * 2, Quaternion.identity);
+        tag7.GetComponent<WeaponInformation>().damage.currentValue = modifiedDamage;
+        tag7.GetComponent<ExplosiveTag>().isTriggerable = false;
+        tag7.GetComponent<ExplosiveTag>().fuseTime = 1 + waveCount / 10f;
+        GameObject tag8 = Instantiate(charm, player.transform.position + (Vector3.down + Vector3.right) * waveCount * 2, Quaternion.identity);
+        tag8.GetComponent<WeaponInformation>().damage.currentValue = modifiedDamage;
+        tag8.GetComponent<ExplosiveTag>().isTriggerable = false;
+        tag8.GetComponent<ExplosiveTag>().fuseTime = 1 + waveCount / 10f;
     }
     public void SetWeaponReference(GameObject newWeapon)
     {
