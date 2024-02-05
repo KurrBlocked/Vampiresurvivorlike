@@ -47,7 +47,7 @@ MonoBehaviour:
   description: Swings Multiple Chains
   timer: 15
   damageModifier: 1
-  requiredUpgrades: 2
+  requiredUpgrades: 3
   icon: {fileID: 21300000, guid: cf9f33c4103416d4e9b10d7c40ac2ed9, type: 3}
 --- !u!114 &6047964878959550656
 MonoBehaviour:

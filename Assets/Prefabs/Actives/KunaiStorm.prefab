@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: Throws Multiple Kunais Around the Player
-  timer: 15
+  timer: 8
   damageModifier: 1
   requiredUpgrades: 4
   icon: {fileID: 21300000, guid: 6be5be7256bcecd45be03e7778cb9f4c, type: 3}
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c343a8c4da931564b9da1cca0838659e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves: 6
-  kunaisPerWave: 36
-  delaysBetweenWaves: 0.5
+  waves: 4
+  kunaisPerWave: 24
+  delaysBetweenWaves: 0.4
   kunai: {fileID: 1107545685610397376, guid: 0ee9c2e342a6f02488f1d1061256bb93, type: 3}

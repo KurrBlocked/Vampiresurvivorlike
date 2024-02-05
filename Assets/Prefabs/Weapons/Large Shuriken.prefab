@@ -129,7 +129,7 @@ MonoBehaviour:
     - 9
     - 13
     - 16
-    - 20
+    - 21
     currentValue: 3.5
   damage:
     upgradeDescription: Increases Damage

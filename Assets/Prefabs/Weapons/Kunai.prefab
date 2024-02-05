@@ -115,31 +115,31 @@ MonoBehaviour:
   weaponDescription: Throws a Kunai At the Cursor
   timer:
     upgradeDescription: Reduces Throwing Cooldown
-    currentTier: 4
+    currentTier: 1
     values:
     - 0.5
+    - 0.45
     - 0.4
+    - 0.35
     - 0.3
-    - 0.2
-    - 0.1
     levelRequirement:
     - 0
     - 2
-    - 6
-    - 10
-    - 15
-    currentValue: 0.1
+    - 8
+    - 13
+    - 22
+    currentValue: 0.43
   damage:
     upgradeDescription: Increases Damage
-    currentTier: 6
+    currentTier: 1
     values:
     - 20
     - 25
     - 30
+    - 35
     - 40
+    - 45
     - 50
-    - 60
-    - 70
     levelRequirement:
     - 0
     - 2
@@ -148,19 +148,19 @@ MonoBehaviour:
     - 12
     - 14
     - 16
-    currentValue: 70
+    currentValue: 25
   numProjectiles:
     upgradeDescription: Increases Number of Projectiles Thrown
-    currentTier: 2
+    currentTier: 0
     values:
     - 1
     - 2
     - 3
     levelRequirement:
     - 0
-    - 11
-    - 18
-    currentValue: 3
+    - 14
+    - 23
+    currentValue: 1
   scale:
     upgradeDescription: Increases Projectile Size
     currentTier: 0

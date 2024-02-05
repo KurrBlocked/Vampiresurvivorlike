@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iFrames: 0
-  expDropProbability: 0.9
+  expDropProbability: 0.8
   expAmount: 2
 --- !u!50 &3177593070167527381
 Rigidbody2D:

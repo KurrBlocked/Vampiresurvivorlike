@@ -117,7 +117,7 @@ MonoBehaviour:
   weaponDescription: Places an Explosive Tag on the Floor
   timer:
     upgradeDescription: Reduce Cooldown
-    currentTier: 0
+    currentTier: 4
     values:
     - 2.5
     - 2
@@ -127,13 +127,13 @@ MonoBehaviour:
     levelRequirement:
     - 0
     - 4
-    - 8
-    - 11
-    - 15
-    currentValue: 2.5
+    - 9
+    - 13
+    - 20
+    currentValue: 0.5
   damage:
     upgradeDescription: Increase Damage
-    currentTier: 0
+    currentTier: 3
     values:
     - 80
     - 120
@@ -150,7 +150,7 @@ MonoBehaviour:
     - 13
     - 16
     - 19
-    currentValue: 80
+    currentValue: 200
   numProjectiles:
     upgradeDescription: Null
     currentTier: 0
@@ -161,14 +161,14 @@ MonoBehaviour:
     currentValue: 1
   scale:
     upgradeDescription: Increases Explosion Size
-    currentTier: 0
+    currentTier: 1
     values:
     - 1
     - 2
     levelRequirement:
     - 0
-    - 10
-    currentValue: 1
+    - 15
+    currentValue: 2
   levelRequirement: 3
   icon: {fileID: 4519102783227728988, guid: 8dd48cf950c3a844fbe3deaaf86bdf0e, type: 3}
 --- !u!61 &7838994448082795317

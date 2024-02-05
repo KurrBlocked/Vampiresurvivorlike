@@ -47,8 +47,6 @@ ScriptsOnlyBuild:
     - UnityEngine.U2D.PixelPerfectCamera
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -754,7 +752,7 @@ ScriptsOnlyBuild:
     className: LimbSolver2D
   - hash:
       serializedVersion: 2
-      Hash: 0055f03b885dc052f5f2204c657a12a1
+      Hash: 6ba43d73c37ebb22c650589ada7a5a57
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharmBarrage
@@ -1346,4 +1344,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/BossMonster.unity
   - Assets/Scenes/EndScreen.unity
   - Assets/Scenes/Instruction.unity
-  playerPath: C:/Users/Roger/GitThings/Projects/Vampiresurvivorlike/Builds/VampireSurvivorLike.exe
+  playerPath: C:/Users/Roger/GitThings/Projects/Vampiresurvivorlike/Builds/NinjaSurvivor/VampireSurvivorLike.exe
