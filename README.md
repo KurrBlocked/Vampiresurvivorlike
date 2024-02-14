@@ -16,9 +16,9 @@ game about ninjas! With unique abilities and movement options, it offers a diffe
 ## Usage
 
 - Controls:
-  - Movement: WASD
-  - Dash: Spacebar + WASD
-  - Activate Ability: 1/2/3
-  - Pause/Unpause: Esc
+  - Movement: `WASD`
+  - Dash: `Spacebar + WASD`
+  - Activate Ability: `1/2/3`
+  - Pause/Unpause: `Esc`
 - Objectives: Survive as long as possible by defeating waves of enemies, collecting power-ups, and unlocking upgrades.
 - Upgrades: Make yourself stronger by defeating enemies and leveling up to receive numerous power-ups.
